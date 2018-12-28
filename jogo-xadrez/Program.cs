@@ -10,8 +10,7 @@ namespace jogo_xadrez {
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                while (!partida.terminada)
-                {
+                while (!partida.terminada){
                     try {
                         Console.Clear();
                         Tela.imprimirPartida(partida);
@@ -38,11 +37,11 @@ namespace jogo_xadrez {
                         Console.ReadLine();
                     }
                 }
-
-                Tela.imprimirTabuleiro(partida.tab);
+                Console.Clear();
+                Tela.imprimirPartida(partida);
+                //Tela.imprimirTabuleiro(partida.tab);
             }
-            catch (TabuleiroException e)
-            {
+            catch (TabuleiroException e){
                 Console.WriteLine(e.Message);
             }
 
